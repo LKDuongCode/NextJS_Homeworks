@@ -1,0 +1,17 @@
+.button {
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #fff;
+    outline: none;
+    padding: 0 16px;
+  }
+  .button_primary {
+    background-color: blue;
+    height: 30px;
+  }
+  .button_danger {
+    background-color: red;
+    height: 30px;
+  }
+  

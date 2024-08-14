@@ -1,0 +1,44 @@
+/* tạo class css cho từng loại button */
+.button {
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+}
+.button_danger {
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: red;
+  color: white;
+  border: none;
+}
+.button_primary {
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+}
+.button_warning {
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: coral;
+  border: none;
+  color: white;
+}
+.button_success {
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: cadetblue;
+  border: none;
+  color: white;
+}

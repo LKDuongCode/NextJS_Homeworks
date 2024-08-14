@@ -16,5 +16,8 @@ const config: Config = {
     },
   },
   plugins: [],
+  corePlugins:{
+    preflight:false, // xóa thuộc tính mặc định của tailwind
+  }
 };
 export default config;

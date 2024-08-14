@@ -1,0 +1,22 @@
+.circle-out {
+  padding: 0.5rem /* 8px */;
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity)) /* #fee2e2 */;
+  border-radius: 9999px;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .circle-in {
+    padding: 0.5rem /* 8px */;
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 202 202 / var(--tw-bg-opacity)) /* #fecaca */;
+    border-radius: 9999px;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

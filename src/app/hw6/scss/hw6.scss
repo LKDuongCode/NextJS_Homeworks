@@ -1,0 +1,15 @@
+.navContainer {
+  display: flex;
+  justify-content: space-evenly;
+  --tw-bg-opacity: 1;
+  background-color: rgb(53 100 235 / var(--tw-bg-opacity)) /* #3564eb */;
+  height: 80px;
+  align-items: center;
+  .active {
+    color: white;
+  }
+  .normal {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-text-opacity)) /* #cbd5e1 */;
+  }
+}
