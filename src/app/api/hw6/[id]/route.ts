@@ -36,6 +36,7 @@ export async function PUT(request: Request, { params }: ParamType) {
 
   if (userIndex === -1) {
     // nếu id không tồn tại, trả về thông báo lỗi
+    //
     return NextResponse.json({
       error: "User not found",
     });
