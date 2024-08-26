@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function page() {
-  return <div>category page</div>;
+  return <div>category pagee</div>;
 }
