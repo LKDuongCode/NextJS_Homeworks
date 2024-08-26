@@ -42,7 +42,7 @@ export default async function Page() {
     return (
       <div>
         <h1>Dữ liệu từ Nhiều API </h1>
-        <p>Không thể tải dữ liệu.</p>
+        <p>Không thể tải dữ liệu</p>
       </div>
     );
   }
