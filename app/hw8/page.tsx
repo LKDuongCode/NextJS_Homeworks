@@ -1,18 +1,14 @@
-import React from "react";
+import axios from "axios";
 
-// Hàm để fetch dữ liệu từ hai API khác nhau và kết hợp chúng
-export async function getServerSideProps() {
-  // Sử dụng Promise.all để thực hiện các yêu cầu API song song
+const getData = async () => {
   const [usersRes, todosRes] = await Promise.all([
-    fetch("https://jsonplaceholder.typicode.com/users"),
-    fetch("https://jsonplaceholder.typicode.com/todos"),
+    axios.get("https://jsonplaceholder.typicode.com/users"),
+    axios.get("https://jsonplaceholder.typicode.com/todos"),
   ]);
 
-  // Chuyển đổi dữ liệu sang định dạng JSON
-  const users = await usersRes.json();
-  const todos = await todosRes.json();
+  const users = usersRes.data;
+  const todos = todosRes.data;
 
-  // Kết hợp dữ liệu dựa trên userId
   const combinedData = todos.map((todo: any) => {
     const user = users.find((user: any) => user.id === todo.userId);
     return {
@@ -21,21 +17,16 @@ export async function getServerSideProps() {
     };
   });
 
-  // Trả về dữ liệu kết hợp như props để render trên trang
-  return {
-    props: {
-      combinedData,
-    },
-  };
-}
+  return combinedData;
+};
 
-// Component để hiển thị dữ liệu trên trang
-const CombinedDataPage = ({ combinedData }: { combinedData: any[] }) => {
+export default async function Page() {
+  const data = await getData();
   return (
     <div>
       <h1>Danh sách công việc và người dùng</h1>
       <ul>
-        {combinedData.map((item) => (
+        {data.map((item: any) => (
           <li key={item.id}>
             <h2>{item.title}</h2>
             <p>Người thực hiện: {item.userName}</p>
@@ -44,6 +35,4 @@ const CombinedDataPage = ({ combinedData }: { combinedData: any[] }) => {
       </ul>
     </div>
   );
-};
-
-export default CombinedDataPage;
+}
